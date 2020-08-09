@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.febs.hama.mapper.SpuMapper">
+
+    <resultMap id="spu" type="cc.mrbird.febs.hama.entity.Spu">
+        <id column="id" jdbcType="bigint" property="id"/>
+        <result column="spu_name" jdbcType="varchar" property="spuName"/>
+        <result column="spu_title" jdbcType="varchar" property="spuTitle"/>
+        <result column="create_time" jdbcType="datetime" property="createTime"/>
+        <result column="create_user_id" jdbcType="bigint" property="createUserId"/>
+        <result column="update_time" jdbcType="datetime" property="updateTime"/>
+        <result column="update_user_id" jdbcType="bigint" property="updateUserId"/>
+        <result column="delete_flag" jdbcType="tinyint" property="deleteFlag"/>
+    </resultMap>
+</mapper>

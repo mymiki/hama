@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.febs.hama.mapper.SkuMapper">
+
+    <resultMap id="sku" type="cc.mrbird.febs.hama.entity.Sku">
+        <id column="id" jdbcType="bigint" property="id"/>
+        <result column="spu_id" jdbcType="bigint" property="spuId"/>
+        <result column="cost_price" jdbcType="decimal" property="costPrice"/>
+        <result column="sale_price" jdbcType="decimal" property="salePrice"/>
+        <result column="show_price" jdbcType="decimal" property="showPrice"/>
+        <result column="lower_price" jdbcType="decimal" property="lowerPrice"/>
+        <result column="upper_price" jdbcType="decimal" property="upperPrice"/>
+        <result column="cost_ticket_count" jdbcType="int" property="costTicketCount"/>
+        <result column="is_income" jdbcType="tinyint" property="isIncome"/>
+        <result column="income_rate" jdbcType="decimal" property="incomeRate"/>
+        <result column="create_time" jdbcType="datetime" property="createTime"/>
+        <result column="create_user_id" jdbcType="bigint" property="createUserId"/>
+        <result column="update_time" jdbcType="datetime" property="updateTime"/>
+        <result column="update_user_id" jdbcType="bigint" property="updateUserId"/>
+        <result column="delete_flag" jdbcType="tinyint" property="deleteFlag"/>
+    </resultMap>
+</mapper>

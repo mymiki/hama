@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.febs.hama.mapper.OnSaleTaskMapper">
+
+    <resultMap id="onSaleTask" type="cc.mrbird.febs.hama.entity.OnSaleTask">
+        <id column="id" jdbcType="bigint" property="id"/>
+        <result column="begin_time_hour" jdbcType="tinyint" property="beginTimeHour"/>
+        <result column="end_time_hour" jdbcType="tinyint" property="endTimeHour"/>
+        <result column="begin_date" jdbcType="date" property="beginDate"/>
+        <result column="last_days" jdbcType="tinyint" property="lastDays"/>
+        <result column="task_staus" jdbcType="tinyint" property="taskStaus"/>
+        <result column="create_time" jdbcType="datetime" property="createTime"/>
+        <result column="create_user_id" jdbcType="bigint" property="createUserId"/>
+        <result column="update_time" jdbcType="datetime" property="updateTime"/>
+        <result column="update_user_id" jdbcType="bigint" property="updateUserId"/>
+        <result column="delete_flag" jdbcType="tinyint" property="deleteFlag"/>
+    </resultMap>
+</mapper>

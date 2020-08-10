@@ -12,11 +12,11 @@ import com.baomidou.mybatisplus.annotation.TableName;
  * 用户表 Entity
  *
  * @author MrBird
- * @date 2020-08-09 19:51:09
+ * @date 2020-08-10 22:31:04
  */
 @Data
-@TableName("h_user")
-public class User {
+@TableName("h_user_info")
+public class UserInfo {
 
     /**
      * id

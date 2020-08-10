@@ -1,8 +1,9 @@
 package cc.mrbird.febs.hama.service.impl;
 
-import cc.mrbird.febs.hama.entity.User;
-import cc.mrbird.febs.hama.mapper.UserMapper;
-import cc.mrbird.febs.hama.service.IUserService;
+import cc.mrbird.febs.common.entity.QueryRequest;
+import cc.mrbird.febs.hama.entity.UserInfo;
+import cc.mrbird.febs.hama.mapper.UserInfoMapper;
+import cc.mrbird.febs.hama.service.IUserInfoService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.annotation.Propagation;
@@ -13,50 +14,52 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
+import java.util.List;
+
 /**
  * 用户表 Service实现
  *
  * @author MrBird
- * @date 2020-08-09 19:51:09
+ * @date 2020-08-10 22:31:04
  */
 @Service
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true, rollbackFor = Exception.class)
-public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
+public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfo> implements IUserInfoService {
 
     @Autowired
-    private UserMapper userMapper;
+    private UserInfoMapper userInfoMapper;
 
     @Override
-    public IPage<User> findUsers(QueryRequest request, User user) {
-        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
+    public IPage<UserInfo> findUserInfos(QueryRequest request, UserInfo userInfo) {
+        LambdaQueryWrapper<UserInfo> queryWrapper = new LambdaQueryWrapper<>();
         // TODO 设置查询条件
-        Page<User> page = new Page<>(request.getPageNum(), request.getPageSize());
+        Page<UserInfo> page = new Page<>(request.getPageNum(), request.getPageSize());
         return this.page(page, queryWrapper);
     }
 
     @Override
-    public List<User> findUsers(User user) {
-	    LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
+    public List<UserInfo> findUserInfos(UserInfo userInfo) {
+	    LambdaQueryWrapper<UserInfo> queryWrapper = new LambdaQueryWrapper<>();
 		// TODO 设置查询条件
 		return this.baseMapper.selectList(queryWrapper);
     }
 
     @Override
     @Transactional
-    public void createUser(User user) {
-        this.save(user);
+    public void createUserInfo(UserInfo userInfo) {
+        this.save(userInfo);
     }
 
     @Override
     @Transactional
-    public void updateUser(User user) {
-        this.saveOrUpdate(user);
+    public void updateUserInfo(UserInfo userInfo) {
+        this.saveOrUpdate(userInfo);
     }
 
     @Override
     @Transactional
-    public void deleteUser(User user) {
-        LambdaQueryWrapper<User> wapper = new LambdaQueryWrapper<>();
+    public void deleteUserInfo(UserInfo userInfo) {
+        LambdaQueryWrapper<UserInfo> wapper = new LambdaQueryWrapper<>();
 	    // TODO 设置删除条件
 	    this.remove(wapper);
 	}

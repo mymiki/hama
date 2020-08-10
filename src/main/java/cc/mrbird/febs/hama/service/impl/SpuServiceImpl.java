@@ -1,5 +1,6 @@
 package cc.mrbird.febs.hama.service.impl;
 
+import cc.mrbird.febs.common.entity.QueryRequest;
 import cc.mrbird.febs.hama.entity.Spu;
 import cc.mrbird.febs.hama.mapper.SpuMapper;
 import cc.mrbird.febs.hama.service.ISpuService;
@@ -12,6 +13,8 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+
+import java.util.List;
 
 /**
  *  Service实现

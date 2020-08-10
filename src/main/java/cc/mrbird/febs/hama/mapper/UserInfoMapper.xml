@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cc.mrbird.febs.hama.mapper.UserMapper">
+<mapper namespace="cc.mrbird.febs.hama.mapper.UserInfoMapper">
 
-    <resultMap id="user" type="cc.mrbird.febs.hama.entity.User">
+    <resultMap id="userInfo" type="cc.mrbird.febs.hama.entity.UserInfo">
         <id column="id" jdbcType="bigint" property="id"/>
         <result column="user_name" jdbcType="varchar" property="userName"/>
         <result column="user_card_no" jdbcType="varchar" property="userCardNo"/>
